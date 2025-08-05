@@ -15,6 +15,9 @@ A repo of a data warehouse project using SQL Server & Power BI
 
 ## Data Warehouse
 
+- Data Source:
+  - https://open.toronto.ca/dataset/bike-share-toronto-ridership-data/
+
 ### Logical Design
 
 ![pic](./pic/Logical_design_ERD.png)
@@ -123,3 +126,6 @@ ORDER BY dim_year, dim_user, trip_count DESC
 - Publish Dashboard
 
 ![pic](./pic/powerbi04.png)
+
+- Embedded with GitHub Page
+  - https://simonangel-fong.github.io/SQL-Server-Toronto_Shared-Bike/
