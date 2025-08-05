@@ -129,3 +129,5 @@ ORDER BY dim_year, dim_user, trip_count DESC
 
 - Embedded with GitHub Page
   - https://simonangel-fong.github.io/SQL-Server-Toronto_Shared-Bike/
+
+![pic](./pic/github_page.png)
