@@ -1,8 +1,8 @@
-# SQL Server Project: Toronto_Shared Bike
+# Toronto Shared Bike Data Warehouse Project - SQL Server + Power BI Solution
 
-A repo of a data warehouse project using SQL Server & Power BI
+A data warehouse project of Toronto Shared Bike using SQL Server & Power BI.
 
-- [SQL Server Project: Toronto\_Shared Bike](#sql-server-project-toronto_shared-bike)
+- [Toronto Shared Bike Data Warehouse Project - SQL Server + Power BI Solution](#toronto-shared-bike-data-warehouse-project---sql-server--power-bi-solution)
 	- [Data Warehouse](#data-warehouse)
 		- [Logical Design](#logical-design)
 		- [Physical Implementation](#physical-implementation)
