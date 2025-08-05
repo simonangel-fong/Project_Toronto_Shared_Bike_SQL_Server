@@ -1,0 +1,37 @@
+name: data-tech02
+
+volumes:
+  sqlserverdata:
+
+networks:
+  public-net:
+    driver: bridge
+
+services:
+  mssql:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    # build: .
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA:-Y}
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:-SecurePassword1234}
+    volumes:
+      - ./script:/usr/src/app/script # scripts to run
+      - ../data:/usr/src/app/data # source data
+      - sqlserverdata:/var/opt/mssql # persist data
+    entrypoint:
+      - /usr/src/app/script/entrypoint.sh # entrypoint script
+    networks:
+      - public-net
+    ports:
+      - "1433:1433"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P $$MSSQL_SA_PASSWORD -Q 'SELECT 1'",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
