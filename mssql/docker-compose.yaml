@@ -1,17 +1,17 @@
-name: data-tech02
+name: toronto-shared-bike-mssql
 
 volumes:
-  sqlserverdata:
+  mssqldata:
+  # mssqlbackup:
 
 networks:
   public-net:
     driver: bridge
 
 services:
-  mssql:
+  mssql-db:
     container_name: mssql
     image: mcr.microsoft.com/mssql/server:2022-latest
-    # build: .
     restart: unless-stopped
     environment:
       ACCEPT_EULA: ${ACCEPT_EULA:-Y}
@@ -19,11 +19,12 @@ services:
     volumes:
       - ./script:/usr/src/app/script # scripts to run
       - ../data:/usr/src/app/data # source data
-      - sqlserverdata:/var/opt/mssql # persist data
+      - ../export:/export # export data
+      - mssqldata:/var/opt/mssql # persist data
     entrypoint:
       - /usr/src/app/script/entrypoint.sh # entrypoint script
     networks:
-      - public-net
+      - public-net # public for dev
     ports:
       - "1433:1433"
     healthcheck:

@@ -1,15 +1,15 @@
-CREATE DATABASE TorontoSharedBikeDB
+CREATE DATABASE toronto_shared_bike
 ON PRIMARY 
 (
-    NAME = 'TorontoSharedBike_Data',
-    FILENAME = '/var/opt/mssql/data/TorontoSharedBike/TorontoSharedBike_Data.mdf',
+    NAME = 'toronto_shared_bike',
+    FILENAME = '/var/opt/mssql/data/toronto_shared_bike/toronto_shared_bike.mdf',
     SIZE = 100MB,
     FILEGROWTH = 20MB
 )
 LOG ON
 (
-    NAME = 'TorontoSharedBike_Log',
-    FILENAME = '/var/opt/mssql/data/TorontoSharedBike/TorontoSharedBike_Log.ldf',
+    NAME = 'toronto_shared_bike_Log',
+    FILENAME = '/var/opt/mssql/data/toronto_shared_bike/toronto_shared_bike_Log.ldf',
     SIZE = 50MB,
     FILEGROWTH = 10MB
 );

@@ -2,10 +2,10 @@
 -- Script Name : create_staging_table.sql
 -- Purpose     : Define the staging table for ridership data
 -- Author      : Wenhao Fang (Converted to MSSQL)
--- Notes       : Must run inside TorontoSharedBikeDB in dw_schema
+-- Notes       : Must run inside toronto_shared_bike in dw_schema
 -- ============================================================================
 
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 -- Create staging table

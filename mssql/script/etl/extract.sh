@@ -9,7 +9,7 @@ ERROR_FILE="$BASE_PATH/error.log"
     -P "$MSSQL_SA_PASSWORD" \
     -C \
     -Q "
-    USE TorontoSharedBikeDB;
+    USE toronto_shared_bike;
     GO
 
     TRUNCATE TABLE dw_schema.staging_trip;

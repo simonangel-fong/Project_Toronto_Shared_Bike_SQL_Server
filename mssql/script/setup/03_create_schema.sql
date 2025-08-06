@@ -6,7 +6,7 @@
 -- ============================================================================
 
 -- Use the target database
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 -- 1. Create a SQL Server Login

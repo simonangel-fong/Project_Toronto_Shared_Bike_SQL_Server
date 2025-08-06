@@ -6,7 +6,7 @@
 -- Notes       : Execute after staging table has been populated and cleaned
 -- ============================================================================
 
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 -- ============================================================================

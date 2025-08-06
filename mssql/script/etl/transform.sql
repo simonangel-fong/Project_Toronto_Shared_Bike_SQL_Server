@@ -3,10 +3,10 @@
 -- Purpose     : Clean and transform data in the staging table before loading into the Data Warehouse
 -- Author      : Wenhao Fang
 -- Date        : 2025-05-07
--- User        : Execute as a user with access to TorontoSharedBikeDB and dw_schema
+-- User        : Execute as a user with access to toronto_shared_bike and dw_schema
 -- ============================================================================
 
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 -- ============================================================================

@@ -1,4 +1,4 @@
-﻿USE TorontoSharedBikeDB;
+﻿USE toronto_shared_bike;
 GO
 
 -- ============================================================================

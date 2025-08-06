@@ -1,4 +1,4 @@
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 -- =========================================
@@ -114,7 +114,7 @@ ORDER BY dim_year
 
 -- =============================
 SELECT *
-FROM TorontoSharedBikeDB.dw_schema.mv_station_count;
+FROM toronto_shared_bike.dw_schema.mv_station_count;
 
 SELECT *
-FROM TorontoSharedBikeDB.dw_schema.mv_bike_count;
+FROM toronto_shared_bike.dw_schema.mv_bike_count;

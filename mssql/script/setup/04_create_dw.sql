@@ -1,4 +1,4 @@
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 DROP INDEX IF EXISTS index_fact_trip_user_type ON dw_schema.fact_trip;

@@ -1,6 +1,6 @@
 -- :SETVAR CSV_FILE "/usr/src/app/data/20219/Ridership-2019-Q1.csv"
 
-USE TorontoSharedBikeDB;
+USE toronto_shared_bike;
 GO
 
 BULK INSERT dw_schema.staging_trip
