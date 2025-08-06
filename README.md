@@ -128,6 +128,6 @@ ORDER BY dim_year, dim_user, trip_count DESC
 ![pic](./pic/powerbi04.png)
 
 - Embedded with GitHub Page
-  - https://simonangel-fong.github.io/SQL-Server-Toronto_Shared-Bike/
+  - https://simonangel-fong.github.io/Project_Toronto_Shared_Bike_SQL_Server/
 
 ![pic](./pic/github_page.png)
