@@ -1,14 +1,15 @@
-# Toronto Shared Bike Data Warehouse Project - SQL Server + Power BI Solution
+# Data Warehouse Project - Toronto Shared Bike (SQL Server + Power BI Solution)
 
 A data warehouse project of Toronto Shared Bike using SQL Server & Power BI.
 
-- [Toronto Shared Bike Data Warehouse Project - SQL Server + Power BI Solution](#toronto-shared-bike-data-warehouse-project---sql-server--power-bi-solution)
+- [Data Warehouse Project - Toronto Shared Bike (SQL Server + Power BI Solution)](#data-warehouse-project---toronto-shared-bike-sql-server--power-bi-solution)
 	- [Data Warehouse](#data-warehouse)
 		- [Logical Design](#logical-design)
 		- [Physical Implementation](#physical-implementation)
 		- [Connect with MSSQL](#connect-with-mssql)
-		- [ETL Pipeline](#etl-pipeline)
+	- [ETL Pipeline](#etl-pipeline)
 		- [Confirm](#confirm)
+		- [Export Processed Data](#export-processed-data)
 	- [Data Visualization: Power BI](#data-visualization-power-bi)
 
 ---
@@ -47,7 +48,11 @@ docker compose up -d
 
 ---
 
-### ETL Pipeline
+## ETL Pipeline
+
+- Diagram
+
+![pic](./pic/etl.gif)
 
 - Extract
 
@@ -87,7 +92,7 @@ SELECT
 	, dim_user
 	, trip_count
 	, duration_sum
-FROM TorontoSharedBikeDB.dw_schema.mv_user_time
+FROM toronto_shared_bike.dw_schema.mv_user_time
 ORDER BY dim_year, dim_month, dim_hour, dim_user
 ```
 
@@ -101,11 +106,21 @@ SELECT
 	, dim_user
 	, dim_station
 	, trip_count
-FROM TorontoSharedBikeDB.dw_schema.mv_user_station
+FROM toronto_shared_bike.dw_schema.mv_user_station
 ORDER BY dim_year, dim_user, trip_count DESC
 ```
 
 ![pic](./pic/query02.png)
+
+---
+
+### Export Processed Data
+
+```sh
+docker exec -it mssql bash /usr/src/app/script/export/export.sh
+```
+
+![pic](./pic/export01.png)
 
 ---
 
